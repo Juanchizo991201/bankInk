@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  # Servicio para la base de datos PostgreSQL
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: bank
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 4dm1n
+    ports:
+      - "5432:5432"
+
+  # Servicio para la aplicación Spring Boot
+  spring-app:
+    build:
+      context: .
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres

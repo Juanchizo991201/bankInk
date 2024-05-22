@@ -10,8 +10,8 @@
     </parent>
     <groupId>com.jjmontenegrop</groupId>
     <artifactId>BankInc</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>BankInc</name>
+    <version>1.0.0</version>
     <description>BankInc</description>
     <properties>
         <java.version>17</java.version>
@@ -89,6 +89,11 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
             </plugin>
         </plugins>
     </build>
